@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <main>
+            <h1>Registration Form</h1>
+            <form action="/insert" method="post" enctype="multipart/form-data">
+                Enter Vehicle Brand :- <input type="text" name="brand" /><br/><br/>
+                Select Vehicel Category :- 
+                <select name="cat">
+                    <% data.forEach((item) => { %>
+                        <option><%= item.category_name %></option>
+                    <% }); %>
+                </select><br/><br/>
+                Enter price :- <input type="text" name="price" /><br/><br/>
+                Enter Depreciation :- <input type="text" name="dep" /><br/><br/>
+                Enter Total Years :- <input type="text" name="years" /><br/><br/>
+                Enter Total Price :- <input type="text" name="tprice" /><br/><br/>
+                Select Pic :- <input type="file" name="myfile" />
+                <input type="submit" value="UPLOAD" name="insert" /><br/><br/>
+                <input type="submit" value="INSERT" name="insert">
+            </form>
+            <form action="/showdata">
+                <input type="submit" value="Show-Data" />
+            </form>
+        </main>
+    </body>
+</html>

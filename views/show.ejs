@@ -1,0 +1,26 @@
+<html>
+    <body>
+        <main>
+            <table border="2" cellpadding="20">
+                <tr>
+                    <th>BRAND</th>
+                    <th>CATEGORY</th>
+                    <th>PRICE</th>
+                    <th>TOTAL</th>
+                    <th>YEARS</th>
+                    <th>PIC</th>
+                </tr>
+                <% data.forEach((item) => { %>
+                    <tr>
+                        <td><%= item.vehicle_brand %></td>
+                        <td><%= item.category_name %></td>
+                        <td><%= item.price %></td>
+                        <td><%= item.total_price %></td>
+                        <td><%= item.number_of_years %></td>
+                        <td><img height="50" width="60" src="<%= item.vehicle_picture %>" alt="nothing"></td>
+                    </tr>
+                <% }); %>
+            </table>
+        </main>
+    </body>
+</html>
